@@ -1,4 +1,4 @@
-# Posudky závěrečných prací
+# Posudky závěrečných prací - TeX
 
 Formuláře pro posudky bakalářských a diplomových prací na VŠE, Praha.
 
