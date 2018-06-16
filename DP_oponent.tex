@@ -1,0 +1,103 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+\usepackage[czech]{babel}
+\usepackage[margin=2.5cm,top=2cm, a4paper]{geometry}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{ulem}
+
+\pagenumbering{gobble}
+
+\renewcommand{\ULthickness}{1.35pt}
+\setlist{noitemsep,topsep=3pt}
+
+\usetikzlibrary{calc}
+\newcommand{\checkbox}[2][5]{
+  \hfill\tikz[baseline,anchor=base]{
+ 
+\foreach \i in {1,...,#1} {
+  \node[rectangle,draw, minimum width=4mm,minimum height=4mm] (\i) at ($(\i*7mm,1mm)$) {\textcolor{white}{}};
+  }
+  \foreach \i in {#2} {
+  \node[cross] at (\i) {};
+}
+}\hspace{50pt}~%
+}
+
+\begin{document}%
+\parindent=0pt
+\tikzset{cross/.style={path picture={ 
+  \draw[black]
+(path picture bounding box.south east) -- (path picture bounding box.north west) (path picture bounding box.south west) -- (path picture bounding box.north east);
+}}}
+\tikz[remember picture,overlay] {\node[anchor= north east] at ($(current page.north east)+(-3.5,-2)$) {\includegraphics[width=3cm]{vse}};}%
+{\Large \sc \textbf{oponentský posudek diplomové práce}}
+\vskip20pt
+\textbf{Katedra:} \quad \textbf{KEKO}
+\vskip7pt
+\textbf{Diplomant:}
+\vskip7pt
+\textbf{Oponent diplomové práce:}
+\vskip7pt
+\textbf{Pracoviště a funkce:}
+\vskip7pt
+\textbf{Téma diplomové práce:}
+\vskip30pt
+
+\hspace*{10.9cm}%
+\tikz[anchor=base,baseline,remember picture]{
+\foreach \i in {1,...,5} {
+  \node[] (h\i) at ($\i*(7mm,0)$) {\textbf{\i}};
+  }
+} \\
+\uline{\textbf{Hodnocení práce}}
+\hspace*{6.6cm} \mbox{\footnotesize  hodnocení: 1 = nejlepší, 5 = nejhorší} \\
+\vspace*{-0.25cm}
+\begin{enumerate}
+  \item Téma práce a její význam \checkbox{}  \\
+\vspace*{-0.25cm}
+  \item Formulace cílů práce a metodika zpracování \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Práce s daty a informacemi \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Členění práce (kapitoly, podkapitoly, odstavce) \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Práce s odbornou literaturou (citace, norma) \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Úroveň jazykového zpracování \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Přesnost formulací a práce s odborným jazykem \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Formální zpracování \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Splnění cílů práce \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Závěry práce a jejich formulace \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Odborný přínos práce, její praktické využití \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Souhrn a klíčová slova odpovídají obsahu práce \checkbox{} \\
+\vspace*{-0.25cm}
+  \item Celkové hodnocení práce známkou (1, 2, 3, 4) \checkbox[4]{}\hspace*{7mm}
+\end{enumerate}
+\vskip10pt
+\uline{\textbf{Otázky k obhajobě}}
+%\begin{enumerate}[label=\roman*)]
+%\end{enumerate}
+\vskip35pt
+
+\uline{\textbf{Další připomínky, vyjádření, náměty k obhajobě práce}}
+\vskip45pt
+%\parindent=1em
+
+\textbf{Datum:}
+\vskip10pt
+\hfill \textbf{Podpis oponenta diplomové práce}
+
+    
+\end{document}
+
