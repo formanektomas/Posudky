@@ -19,7 +19,7 @@
 \usetikzlibrary{calc}
 \newcommand{\checkbox}[2][5]{
   \hfill\tikz[baseline,anchor=base]{
- 
+  	
 \foreach \i in {1,...,#1} {
   \node[rectangle,draw, minimum width=4mm,minimum height=4mm] (\i) at ($(\i*7mm,1mm)$) {\textcolor{white}{}};
   }
@@ -45,8 +45,8 @@
 \textbf{Oponent bakalářské práce:} \quad \textbf{ }
 \vskip3pt
 \textbf{Pracoviště a funkce:} \quad \textbf{ }
-\vskip7pt
-\textbf{Téma bakalářské práce:} \quad \textbf{ }
+\vskip15pt
+\textbf{Téma bakalářské práce:} \quad \parbox[t]{0.58\textwidth}{\textbf{Ekonometrická analýza nezaměstnanosti s využitím panelových dat}}
 \vskip30pt
 
 \hspace*{10.9cm}%
@@ -56,34 +56,25 @@
   }
 } \\
 \uline{\textbf{Hodnocení práce}}
+\setlength{\parskip}{1em}
 \hspace*{6.6cm} \mbox{\footnotesize  hodnocení: 1 = nejlepší, 5 = nejhorší} \\
-\vspace*{-0.25cm}
+\vspace{-0.7cm}
 \begin{enumerate}
+  \setlength\itemsep{-0.25cm}
   \item Formulace cílů práce a metodika zpracování \checkbox{1,2} \\
-\vspace*{-0.25cm}
   \item Práce s daty a informacemi \checkbox{} \\
-\vspace*{-0.25cm}
   \item Členění práce (kapitoly, podkapitoly, odstavce) \checkbox{} \\
-\vspace*{-0.25cm}
   \item Práce s odbornou literaturou (citace, norma) \checkbox{} \\
-\vspace*{-0.25cm}
   \item Úroveň jazykového zpracování \checkbox{} \\
-\vspace*{-0.25cm}
   \item Přesnost formulací a práce s odborným jazykem \checkbox{} \\
-\vspace*{-0.25cm}
   \item Formální zpracování \checkbox{} \\
-\vspace*{-0.25cm}
   \item Splnění cílů práce, závěry práce a jejich formulace \checkbox{} \\
-\vspace*{-0.25cm}
   \item Souhrn a klíčová slova odpovídají obsahu práce \checkbox{} \\
-\vspace*{-0.25cm}
   \item Celkové hodnocení práce známkou (1, 2, 3, 4) \checkbox[4]{1}\hspace*{7mm}
 \end{enumerate}
 \vskip15pt
 \uline{\textbf{Otázky k obhajobě}}
-%\begin{enumerate}[label=\roman*)]
-%\item
-%\end{enumerate}
+
 \vskip36pt
 
 \uline{\textbf{Další připomínky, vyjádření, náměty k obhajobě práce}}
